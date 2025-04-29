@@ -1,4 +1,6 @@
-# ray-isolated-environments
+# Using isolated environments with Ray and UV
+
+This repository shows how to use isolated UV environments in a single Ray application.
 
 ## ray-core
 
