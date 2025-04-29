@@ -1,0 +1,7 @@
+[project]
+name = "main_env"
+version = "0.1"
+dependencies = [
+  "ray[serve]",
+]
+requires-python = ">=3.11"

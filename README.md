@@ -27,3 +27,21 @@ different. If Python objects are passed between the environments, they need to b
 too -- this will be the case for primitive Python types like strings, dicts, lists etc. and
 also often for user defined types unless their representation changed between the different
 package versions (e.g. if a field got added or removed).
+
+## ray-serve
+
+Switch into the `ray-serve` directory and run the example with
+`uv run serve run main:language_classifier`. You can query the service with
+```python
+import requests
+
+response = requests.post(
+    "http://localhost:8000", json={"language": "spanish", "name": "Dora"}
+)
+greeting = response.text
+print(greeting)
+```
+
+For more information about Ray Serve dependency handling see
+
+https://docs.ray.io/en/latest/serve/production-guide/handling-dependencies.html
